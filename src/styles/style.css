@@ -1,150 +1,121 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    list-style: none;
-    overflow: hidden;
-    text-decoration: none;
+body {
+  width: 100vw;
+  height: 100vh;
 }
 
-.img-fundo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+section {
+  width: 100%;
+  height: calc(100% - 4rem);
 }
 
-body{
-    width: 100vw;
-    height: 100vh;
+.home-cont {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
 }
 
-header{
-    width: 100%;
-    height: 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 3rem;
+.esquerda {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 5rem;
 }
 
-nav .nav{
-    width: 100%;
-    display: flex;
-    gap: 4rem;
+.esquerda h1 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  font-size: 4.5rem;
+  font-weight: bolder;
 }
 
-nav .nav a{
-    color: black;
+.esquerda hr {
+  width: 7rem;
+  height: 4px; /* aumenta a espessura */
+  background-color: #ff6600; /* cor da linha */
+  border: none; /* remove a borda padrão */
 }
 
-header p{
-    font-weight: bold;
-    font-size: 1.4rem;
+.direita {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5rem 0 10rem;
 }
 
-
-.logo{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 0.3rem;
+.about-link,
+.work,
+.follow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-header img{
-    height: 35%;
+.direita .sub-tittle {
+  font-size: 1rem;
 }
 
-section{
-    width: 100%;
-    height: calc(100% - 4rem)
+.direita .link a {
+  color: black;
+  font-size: 0.8rem;
 }
 
-.home-cont{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    height: 100%;
-}
-
-.esquerda{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0 5rem;
-}
-
-.esquerda h1{
-    font-size: 4.5rem;
-    font-weight: bolder;
-}
-
-.esquerda hr{
-    width: 7rem;
-    height: 4px; /* aumenta a espessura */
-    background-color: black; /* cor da linha */
-    border: none; /* remove a borda padrão */
-}
-
-.direita{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 5rem 0 10rem;
-}
-
-.about-link, .work, .follow{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.direita .sub-tittle{
-    font-size: 1rem;
-}
-
-.direita .link a{
-    color: black;
-    font-size: 0.8rem;
-}
-
-.direita p{
-    font-size: 0.7rem;
+.direita p {
+  font-size: 0.7rem;
 }
 
 .direita .link-bloco hr {
-    width: 6rem;
-    height: 3px;
-    background-color: black;
-    margin-left: 0;
-    align-self: flex-start;
-    margin: 0.3rem 0 0 0;
+  width: 6rem;
+  height: 3px;
+  border: none;
+  background-color: #ff6600;
+  margin-left: 0;
+  align-self: flex-start;
+  margin: 0.3rem 0 0 0;
 }
 
-.portfolio{
-    width: 9.2rem !important;
+.portfolio {
+  width: 9.2rem !important;
 }
 
-.direita hr{
-    margin: 1rem 0;
-    width: 100%;
-    height: 1px;
-    background-color: rgb(72, 72, 72);
+.direita hr {
+  margin: 1rem 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(72, 72, 72);
 }
 
-.follow .social{
-    display: flex;
-    gap: 1rem;
+.follow .social {
+  display: flex;
+  gap: 1rem;
 }
 
-.follow .social img{
-    width: 2rem;
+.follow .social img {
+  width: 2rem;
+}
+
+.cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite step-end;
+    font-weight: 100;
+    font-size: 3rem; /* mesmo tamanho do texto */
+    line-height: 1; /* controla a altura da linha */
+    vertical-align: baseline; /* faz alinhar certinho na linha */
+    color: #ff6600;
+  }  
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
 }
